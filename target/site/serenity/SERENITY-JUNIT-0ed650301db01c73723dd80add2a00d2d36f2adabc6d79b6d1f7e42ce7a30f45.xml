@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Contactar servicio al cliente" skipped="0" tests="2" time="35.26" timestamp="2022-03-27 03:39:50"><testcase name="Enviar solicitud exitosa"/><testcase name="Enviar solicitud fallida"/></testsuite>

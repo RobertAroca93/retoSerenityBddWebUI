@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static co.com.sofka.questions.CreateAnAccountSuccessful.createAnAccountSuccessful;
+
 import static co.com.sofka.questions.SignInFailed.signInFailed;
 import static co.com.sofka.questions.SignInSuccesful.signInSuccesful;
 import static co.com.sofka.tasks.openWebPage.OpenWebPage.openWebPage;
@@ -45,7 +45,8 @@ public class SignInStepDefinition extends SetUp {
     @Then("debo ingresar a mi cuenta exitosamente")
     public void debo_ingresar_a_mi_cuenta_exitosamente() {
         theActorInTheSpotlight().should(
-                seeThat(signInSuccesful().loginVerification(LOGIN_SUCCESSFUL))
+                seeThat(signInSuccesful().loginVerification(LOGIN_SUCCESSFUL),
+                        equalTo(true))
                 );
 
     }
@@ -72,7 +73,8 @@ public class SignInStepDefinition extends SetUp {
     @Then("el sistema debe mostrar el mensaje de error")
     public void el_sistema_debe_mostrar_el_mensaje_de_error() {
         theActorInTheSpotlight().should(
-                seeThat(signInFailed().failedLoginMessage(LOGIN_FAILED))
+                seeThat(signInFailed().failedLoginMessage(LOGIN_FAILED),
+                        equalTo(true))
         );
 
     }

@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="32bcc8aacef3e43d5d3e1dc8a921c23b67d12ac28c2e07b53738ef579dfc153a.html">Contactar Servicio Al Cliente</a></span>
+                > <span class="truncate-60"><a
+                    href="0ed650301db01c73723dd80add2a00d2d36f2adabc6d79b6d1f7e42ce7a30f45.html">Enviar solicitud exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-03-2022 15:39</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Contactar Servicio Al Cliente </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la plataforma<br />
+deseo hacer contacto con servicio al cliente<br />
+para asi obtener soporte e informacion
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Enviar solicitud exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Given dado que me encuentro en el modulo de contacto" width="1366"/>
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Robert aroca open web page" width="1366"/>
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Robert Aroca opens the On web page" width="1366"/>
+                <img src="3dee85cfaf76bd52144aab5d25d5d697216b5796c033a21e1ddd8ac7b904d648.png" title=" Robert Aroca opens the On web page (completed)" width="1366"/>
+                <img src="3dee85cfaf76bd52144aab5d25d5d697216b5796c033a21e1ddd8ac7b904d648.png" title=" Robert aroca open web page (completed)" width="1366"/>
+                <img src="3dee85cfaf76bd52144aab5d25d5d697216b5796c033a21e1ddd8ac7b904d648.png" title=" Given dado que me encuentro en el modulo de contacto (completed)" width="1366"/>
+                <img src="11dbb621220a2442f9a12831515c3914fd704393125aefa0e9ca2bc8f10ddfb3.png" title=" When ingreso los datos correctos en los campos obligatorios" width="1366"/>
+                <img src="11dbb621220a2442f9a12831515c3914fd704393125aefa0e9ca2bc8f10ddfb3.png" title=" Robert aroca browse to contact us" width="1366"/>
+                <img src="11dbb621220a2442f9a12831515c3914fd704393125aefa0e9ca2bc8f10ddfb3.png" title=" Robert Aroca clicks on Contact" width="1366"/>
+                <img src="b2b1275d84e1a48f0855c4138afddc3d28be90674ca6674addbb2144bf47ad6a.png" title=" Robert Aroca clicks on Contact (completed)" width="1366"/>
+                <img src="b2b1275d84e1a48f0855c4138afddc3d28be90674ca6674addbb2144bf47ad6a.png" title=" Robert aroca browse to contact us (completed)" width="1366"/>
+                <img src="b2b1275d84e1a48f0855c4138afddc3d28be90674ca6674addbb2144bf47ad6a.png" title=" Robert aroca fill contact us" width="1366"/>
+                <img src="e1e4c7c06f2797c73ca578b2861ab6945165aebf7f084822f363ddad73d40b37.png" title=" Robert Aroca clicks on Subject Heading" width="1366"/>
+                <img src="2c2b86e41c9b9325891b56c4f4d9d780cbe5b28f7fd5fc36d869c8d2216c4dd6.png" title=" Robert Aroca clicks on Subject Heading (completed)" width="1366"/>
+                <img src="2c2b86e41c9b9325891b56c4f4d9d780cbe5b28f7fd5fc36d869c8d2216c4dd6.png" title=" Robert Aroca select Webmaster on Subject Heading" width="1366"/>
+                <img src="71b685e2821c1fc4963f410c954ca9610546c47f4acdd58b8e0541542a4c8865.png" title=" Robert Aroca select Webmaster on Subject Heading (completed)" width="1366"/>
+                <img src="577a564dce1f215e63ae058f59bb813ae195505c761c0a69c17e5f060dcf3281.png" title=" Robert Aroca enters 'masako.reinger@hotmail.com' into Email Adress" width="1366"/>
+                <img src="f23112a08def8d5f999a2e8a9c2e5707b5dc1f8e80e99f309f3cc81c72944f83.png" title=" Robert Aroca enters 'masako.reinger@hotmail.com' into Email Adress (completed)" width="1366"/>
+                <img src="f23112a08def8d5f999a2e8a9c2e5707b5dc1f8e80e99f309f3cc81c72944f83.png" title=" Robert Aroca enters '38049' into Order Reference" width="1366"/>
+                <img src="ba4f5aee778e48a8e95664b7b0b49f7d0a3768587c591378aa4789855bf8f156.png" title=" Robert Aroca enters '38049' into Order Reference (completed)" width="1366"/>
+                <img src="6254efdeafe12d88f1fb3bfc4745198107fea975706afb6a3fec07c1a8926e12.png" title=" Robert Aroca enters 'Israel' into Message" width="1366"/>
+                <img src="05c2b8083755a93501570bf6be239cbb3c5f5185287286e75bfff8bef48d246b.png" title=" Robert Aroca enters 'Israel' into Message (completed)" width="1366"/>
+                <img src="05c2b8083755a93501570bf6be239cbb3c5f5185287286e75bfff8bef48d246b.png" title=" Robert Aroca clicks on Button Send Message" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" Robert Aroca clicks on Button Send Message (completed)" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" Robert aroca fill contact us (completed)" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" When ingreso los datos correctos en los campos obligatorios (completed)" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" Then se debe mostrar mensaje de envio exitoso" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" Then contact us successful should be (true)" width="1366"/>
+                <img src="1d9b478a7cfa375caf6f620c2d9d98fe749ff68434422200d81d762fa73b0751.png" title=" Then se debe mostrar mensaje de envio exitoso (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
