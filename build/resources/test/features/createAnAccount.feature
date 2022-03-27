@@ -11,3 +11,8 @@ Feature: registro de usuario
     Given dado que me encuentro en el apartado de registro
     When diligencio correctamente los datos
     Then el sistema debera mostrar el mensaje de bienvenida
+
+  Scenario: registro fallido
+    Given dado que me encuentro en el modulo de registro
+    When no ingreso el campo obligatorio de codigo postal
+    Then el sistema debera mostrar el mensaje de error

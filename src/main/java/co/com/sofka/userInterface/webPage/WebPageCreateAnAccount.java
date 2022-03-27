@@ -64,11 +64,9 @@ public class WebPageCreateAnAccount extends PageObject {
             .the("My account")
             .located(By.xpath("//*[@id=\"center_column\"]/p"));
 
-
-
-
-
-
+    public static final Target REGISTER_ERROR = Target
+            .the("Error Message")
+            .located(By.xpath("//*[@id=\"center_column\"]/div/ol/li"));
 
 
 
