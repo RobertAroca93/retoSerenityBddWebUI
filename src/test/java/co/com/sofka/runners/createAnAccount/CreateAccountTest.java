@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/createAnAccount/createAnAccount.feature"},
+        features = {"src/test/resources/features/createAnAccount.feature"},
         glue = {"co.com.sofka.stepDefinitions.createAnAccount"},
         tags = {""}
 

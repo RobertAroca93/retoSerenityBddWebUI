@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="130e9eb3938c50624fd4f2d56b151d73bc52b53dbadd0f77f79fa931cd0f0eb2.html">Registro De Usuario</a></span>
+                > <span class="truncate-60"><a
+                    href="4949a61a8313de753f8f8f9e841240f148ec02365862a0547f6bf2e698bb8002.html">registro exitoso </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-03-2022 10:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Registro De Usuario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario del sistema<br />
+deseo registrame en la plataforma<br />
+para hacer usos de los servicios que esta ofrece
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">registro exitoso
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Given dado que me encuentro en el apartado de registro" width="1366"/>
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Robert aroca open web page" width="1366"/>
+                <img src="e5cdefff939ac8b1f5f6a113ef746efd88a82ee5d9c679c36ac33b64d17b31a4.png" title=" Robert Aroca opens the On web page" width="1366"/>
+                <img src="b203b4b447b5812bb2132bc8df589e0b1efe847c1e8ae201b9d8e2d4e003aad2.png" title=" Robert Aroca opens the On web page (completed)" width="1366"/>
+                <img src="b203b4b447b5812bb2132bc8df589e0b1efe847c1e8ae201b9d8e2d4e003aad2.png" title=" Robert aroca open web page (completed)" width="1366"/>
+                <img src="b203b4b447b5812bb2132bc8df589e0b1efe847c1e8ae201b9d8e2d4e003aad2.png" title=" Given dado que me encuentro en el apartado de registro (completed)" width="1366"/>
+                <img src="4f8e16382bc3e763c3c86bf7befbfb9567091dd8776125168463759475192a7c.png" title=" When diligencio correctamente los datos" width="1366"/>
+                <img src="4f8e16382bc3e763c3c86bf7befbfb9567091dd8776125168463759475192a7c.png" title=" Robert aroca browse to sign in" width="1366"/>
+                <img src="4f8e16382bc3e763c3c86bf7befbfb9567091dd8776125168463759475192a7c.png" title=" Robert Aroca clicks on Sign In" width="1366"/>
+                <img src="592a42b1c77eb64cae5736889997d95dc0d773b09cd9ad598bb47a8f23656b69.png" title=" Robert Aroca clicks on Sign In (completed)" width="1366"/>
+                <img src="592a42b1c77eb64cae5736889997d95dc0d773b09cd9ad598bb47a8f23656b69.png" title=" Robert aroca browse to sign in (completed)" width="1366"/>
+                <img src="592a42b1c77eb64cae5736889997d95dc0d773b09cd9ad598bb47a8f23656b69.png" title=" Robert aroca fill create an account" width="1366"/>
+                <img src="093888559916d08fd9ecda9685c2b4fd928f7e7583ddd87e09c9140ddc3b3ec4.png" title=" Robert Aroca enters 'kristofer.deckow@yahoo.com' into Enter email" width="1366"/>
+                <img src="1eb5c21b716405304b9dc8ec6a57eafadb7cbdb196bc4a361e2ff08ed23ed20c.png" title=" Robert Aroca enters 'kristofer.deckow@yahoo.com' into Enter email (completed)" width="1366"/>
+                <img src="9a84c7bc3d513ea800fa30fe7944486020936a6365b8415b70cdb5302417c8b4.png" title=" Robert Aroca clicks on Create an account" width="1366"/>
+                <img src="2ba7d25ad46f8f61e2ed2fb7b9139e59059fb8e180a881adc7176e70210bb1af.png" title=" Robert Aroca clicks on Create an account (completed)" width="1366"/>
+                <img src="9076047dda6122d039c79947fb975d77896448dd8088f5f0cc4c0a9dd0469f98.png" title=" Robert Aroca enters 'Lee' into First Name" width="1366"/>
+                <img src="0d903f7daab2f26313fd366faf9d2839421418b1cc6039bf7ab08242b2968766.png" title=" Robert Aroca enters 'Lee' into First Name (completed)" width="1366"/>
+                <img src="e2978cc1227c4369e09ff623a168885cf282f3bd1172f87651ac11193c4af860.png" title=" Robert Aroca enters 'Corkery' into Last Name" width="1366"/>
+                <img src="daf27a4163bbb7240848ee9d3069e630a40d23ff11fd8fa40791b22639da600e.png" title=" Robert Aroca enters 'Corkery' into Last Name (completed)" width="1366"/>
+                <img src="6ac290f8c8d250dc9a3266e092a216028eda0e95568ecfe4ffaf1b3e301db731.png" title=" Robert Aroca enters 'epwtxswyncudn' into Password" width="1366"/>
+                <img src="0e81264ff1d0722eabda3a46f7fb49bf503610ea277d838a977b831f1e402312.png" title=" Robert Aroca enters 'epwtxswyncudn' into Password (completed)" width="1366"/>
+                <img src="221f377b54b911ecfb8f2a7d572e0f553270d63d82af638d4df8fdf5e1a377ec.png" title=" Robert Aroca enters 'Suite 801 27702 Winifred Forge, Grahamland, ID 55107' into Adress1" width="1366"/>
+                <img src="c591b360aa822d3624a071c4ba1c8ecf2d4f34fc62d1e8ed460f22d610b70ec2.png" title=" Robert Aroca enters 'Suite 801 27702 Winifred Forge, Grahamland, ID 55107' into Adress1 (completed)" width="1366"/>
+                <img src="7773124bd07cacde94cf20e4a9d8bf0b8ac2f29c575d454c027f8e145721720e.png" title=" Robert Aroca enters 'San Jose' into City" width="1366"/>
+                <img src="64dba823d8bf1f200782e642b3cda4add64928fef4333a200d27bc93c940c9bb.png" title=" Robert Aroca enters 'San Jose' into City (completed)" width="1366"/>
+                <img src="ff9de22352f561e6f4e4f4f24848f6075f61b2016c13a797f0e770725d3bdf63.png" title=" Robert Aroca select Alaska on State" width="1366"/>
+                <img src="cc2e93779a2e933813e3548119ae8a4eb6a134407065e914a65e48d4cd525766.png" title=" Robert Aroca select Alaska on State (completed)" width="1366"/>
+                <img src="40b8a0f2dea4a0436a7bcb0b64a6f14b61075592f98e904c4ca433eb3aa5e963.png" title=" Robert Aroca enters '71053' into Postal Code" width="1366"/>
+                <img src="2c6a13167db803731e7a59bdebe068fd4a42d0edeeb4899ad65c3086abc436cc.png" title=" Robert Aroca enters '71053' into Postal Code (completed)" width="1366"/>
+                <img src="3a15ea079936221a9fffd21718ccbc54591bd956afaa257933559c9159985679.png" title=" Robert Aroca enters '62757' into Phone" width="1366"/>
+                <img src="bb4adeb09066859560ea8388df804aa4412fe5413b52f199b0c930438c8304b2.png" title=" Robert Aroca enters '62757' into Phone (completed)" width="1366"/>
+                <img src="5ebf627974547e9c4709e6fda498bfb0f27eaec748beeebda0958a5cca6e6dce.png" title=" Robert Aroca clicks on Register Button" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" Robert Aroca clicks on Register Button (completed)" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" Robert aroca fill create an account (completed)" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" When diligencio correctamente los datos (completed)" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" Then el sistema debera mostrar el mensaje de bienvenida" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" Then create an account successful should be (true)" width="1366"/>
+                <img src="f7b5faf5ebfdc580c39e6ab68f1b16278a6034c151aec90e925c33e362ac48e9.png" title=" Then el sistema debera mostrar el mensaje de bienvenida (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
