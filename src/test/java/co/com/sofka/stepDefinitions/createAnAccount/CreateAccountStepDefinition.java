@@ -6,7 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static co.com.sofka.questions.CreateAnAccountFail.createAnAccountFail;
+import static co.com.sofka.questions.CreateAnAccountFailed.createAnAccountFail;
 import static co.com.sofka.questions.CreateAnAccountSuccessful.createAnAccountSuccessful;
 import static co.com.sofka.tasks.openWebPage.OpenWebPage.openWebPage;
 import static co.com.sofka.tasks.webPageYourLogo.BrowseToSignIn.browseToSignIn;

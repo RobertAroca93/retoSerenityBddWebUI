@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Question;
 
 import static co.com.sofka.userInterface.webPage.WebPageCreateAnAccount.REGISTER_ERROR;
 
-public class CreateAnAccountFail implements Question<Boolean> {
+public class CreateAnAccountFailed implements Question<Boolean> {
 
     private String failRegisterMessage;
 
-    public CreateAnAccountFail registerVerificationFail (String failRegisterMessage){
+    public CreateAnAccountFailed registerVerificationFail (String failRegisterMessage){
         this.failRegisterMessage = failRegisterMessage;
         return this;
     }
@@ -17,7 +17,7 @@ public class CreateAnAccountFail implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         return (REGISTER_ERROR.resolveFor(actor).containsOnlyText(failRegisterMessage));
     }
-    public static CreateAnAccountFail createAnAccountFail(){
-        return new CreateAnAccountFail();
+    public static CreateAnAccountFailed createAnAccountFail(){
+        return new CreateAnAccountFailed();
     }
 }
